@@ -24,27 +24,41 @@ class Task implements Runnable{
 		
 		for (int i = 0; i < 3; i++) {
 			
-			es.schedule(() -> System.out.println("Time to take a break!\nPress enter: "), 
+			es.schedule(new Task2("Time to take a break!\nPress enter: "),
 					25, 
 					TimeUnit.MINUTES);
-			play("alarm.wav");
-			scanner.nextLine();
-			es.schedule(() -> System.out.println("Go back to work, peon!\nPress enter: "),
+			
+			es.schedule(new Task2("Go back to work, peon!!\nPress enter: "),
 					5,
 					TimeUnit.MINUTES);
-			play("alarm.wav");
-			scanner.nextLine();
 		}
 		
-		es.schedule(() -> System.out.println("Time for a BIG BREAK!!!\nPress enter: "),
+		es.schedule(new Task2("Time to take a break!\nPress enter: "),
 					25,
 					TimeUnit.MINUTES);
-		play("alarm.wav");
-		scanner.hasNextLine();
-		es.schedule(() -> System.out.println("Go back to work, peon!\nPress enter: "),
+
+		es.schedule(new Task2("Time for a BIIIG BREAK!!!\nPress enter: "),
 					30,
 					TimeUnit.MINUTES);
+	}
+	
+	public static void main(String[] args) {
+		(new Thread(new Task())).start();	
+	}
+}
+
+
+class Task2 implements Runnable{
+	
+	String text;
+	
+	Task2(String string){text = string;}
+	
+	Scanner scanner = new Scanner(System.in);
+	
+	public void run() {
 		play("alarm.wav");
+		System.out.println(text);
 		scanner.nextLine();
 	}
 	
@@ -70,10 +84,5 @@ class Task implements Runnable{
 			exc.printStackTrace(System.out);
 		}
 	}
+	
 }
-
-
-
-
-
-
