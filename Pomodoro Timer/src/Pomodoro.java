@@ -28,9 +28,13 @@ public class Pomodoro {
 				catch (InterruptedException ex) {
 					Thread.currentThread().interrupt();
 				}
-				play("alarm.wav");
-				System.out.println("Go back to work, peon!!\nPress Enter: ");
-				scanner.nextLine();
+				if (i != 2){ 			//skip this in the third iteration so that it won't print
+								//this line AND line 40
+					play("alarm.wav");
+					System.out.println("Go back to work, peon!!\nPress Enter: ");
+					scanner.nextLine();	
+				}
+
 			}
 			play("alarm.wav");
 			System.out.println("Time for a BIG BREAK!!!\nPress Enter: ");
