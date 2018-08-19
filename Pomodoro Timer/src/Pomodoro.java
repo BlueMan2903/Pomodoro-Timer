@@ -29,11 +29,11 @@ public class Pomodoro {
 					Thread.currentThread().interrupt();
 				}
 				play("alarm.wav");
-				System.out.println("Go back to work, peon!!\\nPress Enter: ");
+				System.out.println("Go back to work, peon!!\nPress Enter: ");
 				scanner.nextLine();
 			}
 			play("alarm.wav");
-			System.out.println("Time for a BIG BREAK!!!\\nPress Enter: ");
+			System.out.println("Time for a BIG BREAK!!!\nPress Enter: ");
 			scanner.nextLine();
 			
 			try {
@@ -43,7 +43,7 @@ public class Pomodoro {
 				Thread.currentThread().interrupt();
 			}
 			play("alarm.wav");
-			System.out.println("Go back to work, peon!!\\nPress Enter: ");
+			System.out.println("Go back to work, peon!!\nPress Enter: ");
 			scanner.nextLine();
 		}
 	}
