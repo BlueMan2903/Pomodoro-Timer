@@ -62,8 +62,7 @@ public class Pomodoro {
 		do	{
 			try {			
 				System.out.println( minutes + ":" + seconds );
-		        //TimeUnit.SECONDS.sleep(1);
-		        TimeUnit.MILLISECONDS.sleep(1);
+		        TimeUnit.SECONDS.sleep(1);
 		        seconds.next(); //decrements seconds by 1
 		        if(seconds.getCounter() == 59)
 		            minutes.next(); //decrements minutes by 1		        
