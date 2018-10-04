@@ -17,19 +17,16 @@ public class Pomodoro {
 		while (true) {
 			for (int i = 0; i < 3; i++) {
 				countdown(25, minutes, seconds);	
-				if (i != 2){ 			//skip this in the third iteration so that it won't print
-								//this line AND line 30
+				if (i != 2){ 			//skip this in the third and last iteration								
 					System.out.println("Time for a break!\nPress Enter: ");
 					scanner.nextLine();
 					countdown(5, minutes, seconds);
 					System.out.println("Go back to work, peon!!\nPress Enter: ");
 					scanner.nextLine();	
 				}
-
 			}
 			System.out.println("Time for a BIG BREAK!!!\nPress Enter: ");
-			scanner.nextLine();
-			
+			scanner.nextLine();			
 			countdown(30, minutes, seconds);
 			System.out.println("Go back to work, peon!!\nPress Enter: ");
 			scanner.nextLine();
