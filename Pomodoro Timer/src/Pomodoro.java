@@ -5,9 +5,9 @@ public class Pomodoro {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		Timer TwentyFiveMinutesTimer = new Timer(0,5);
-		Timer FiveMinutesTimer = new Timer(0,1);
-		Timer ThirtyMinutesTimer = new Timer(0,10);
+		Timer TwentyFiveMinutesTimer = new Timer(25,0);
+		Timer FiveMinutesTimer = new Timer(5,0);
+		Timer ThirtyMinutesTimer = new Timer(30,0);
         
 		System.out.println("Let's study!!");
 
